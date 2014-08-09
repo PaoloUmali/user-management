@@ -18,7 +18,8 @@ class UserManagementServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('paoloumali/user-management');
+		$this->package('paoloumali/user-management', 'userman');
+		include __DIR__.'/../../routes.php';
 	}
 
 	/**
@@ -38,7 +39,7 @@ class UserManagementServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array();
+		return array('userman');
 	}
 
 }
